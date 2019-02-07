@@ -138,13 +138,13 @@ def main():
     config = get_config(args["configfile"])
     allowed_networks = read_allowed_networks(args)
     url_root = 'https://' + config["infoblox"]["host"]
-    cookie_jar = DDI_Util.auth_request(config["infoblox"]["user"],
+    cookie_jar = auth_request(config["infoblox"]["user"],
                                        config["infoblox"]["password"],
                                        url_root)
     if not cookie_jar:
         print("ERROR: Authentication token not avaialble. Exiting.")
         sys.exit(1)
-    a_records = DDI_Util.enumerate_a_by_view(cookie_jar, url_root, args["view"])
+    a_records = enumerate_a_by_view(cookie_jar, url_root, args["view"])
     candidate_addresses = []
     for record in a_records:
         candidate_addresses.append(record["ipv4addr"])
