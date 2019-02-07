@@ -1,0 +1,6 @@
+# Add CIDR blocks of allowed IPv4 networks here.
+# For a single address, specify e.g. 1.2.3.4/32.
+#
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
