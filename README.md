@@ -12,4 +12,5 @@ Given a list of IPv4 networks looks at a specific DNS view on NIOS. Print any A 
  Configuration file to specify Gridmaster hostname, user and password.  
 
  **credit** 
+
 Credit to Chris Hindy who wrote this with little notice and has be so kind to allow it to be published under Apache 2.0
